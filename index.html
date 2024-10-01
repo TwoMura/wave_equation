@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Contour Plot</title>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+  <label>delta_t: <input type="number"  id="delta_t" size="40" value="0.001"></label><br>
+  <label>delta_x: <input type="number"  id="delta_x" size="40" value="1.0"></label><br>
+  <label>wave_speed: <input type="number"  id="wave_speed" size="40" value="340.3"></label><br>
+  <label>amplitude: <input type="number"  id="amplitude" size="40" value="100.0"></label><br>
+  <label>frequency: <input type="number"  id="frequency" size="40" value="500.0"></label><br>
+  <label>point_v0: <input type="number"  id="point_v0" size="40" value="100.0"></label><br>
+  <label>point_a: <input type="number"  id="point_a" size="40" value="0.0"></label><br>
+  <label>point_x0: <input type="number" id="point_x0" size="40" value="50"></label><br>
+  <label>grid_size: <input type="number" id="grid_size" size="40" value="101"></label><br>
+  <label>contour_minmax: <input type="number"  id="contour_minmax" size="40" value="1.0"></label><br>
+  <label>boundary_type: <select id="boundary_type" size="1">
+    <option value="fixed">fixed</option>
+    <option value="absorption">absorption</option>
+    <option value="annular">annular</option>
+  </select></label><br>
+
+  <button id="reload_button" size="40">reload</button><br>
+  <button id="stop_button" size="40">stop / restart</button><br>
+  <div id="contour-plot" style="width: 600px; height: 600px;"></div>
+  <script type="text/javascript" src="main.js"></script>
+
+</body>
+</html>
